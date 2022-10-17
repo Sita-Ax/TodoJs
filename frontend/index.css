@@ -1,0 +1,200 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5Cf6;
+}
+
+/* css variables to crete the colors using by var(--colors)*/
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*using the hole project*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+/*body to create the hole page*/
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*crete the header*/
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+/*create the header line*/
+
+#todoForm {
+    display: flex;
+}
+
+/*the form bottom*/
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/*don´t have any styles*/
+
+#newTodoInput {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    color: var(--light);
+}
+
+/*the input fielts to the todos*/
+
+#newTodoInput::placeholder {
+    color: var(--gray);
+}
+
+/*crete the placeholder*/
+
+#newSubmit {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/*the add button*/
+
+#newSubmit:hover {
+    opacity: 0.8;
+}
+
+/*if you hover*/
+
+#newSubmit:active {
+    opacity: 0.6;
+}
+
+/*if it´s clicked on looking nice*/
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*like the body*/
+
+.todoList {
+    padding: 1rem;
+}
+
+/*creted the list*/
+
+.todoList h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+/*the list style*/
+
+#todos .todo {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.todo .content {
+    flex: 1 1 0%;
+}
+/*puch space-between*/
+
+.todo .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+/*do trans to get fincy color*/
+.todo .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+/*if not used read-only*/
+.todo .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+/*pulling back into doing next*/
+
+.todo .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+/*the buttom*/
+
+.todo .actions button:hover {
+    opacity: 0.8;
+}
+
+/*if you hover*/
+
+.todo .actions button:active {
+    opacity: 0.6;
+}
+
+/*if it´s clicked on*/
+
+.todo .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/*when the button has clicked on to edit the todo*/
+
+.todo .actions .delete {
+    color: crimson;
+}
+/*when deleted button is clicked*/
